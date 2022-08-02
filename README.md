@@ -2,7 +2,7 @@
 <h1>Puppify</h1>
 <i>Pets store</i>
 in progress...
-</br>
+<br>
 
 
 
