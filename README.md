@@ -1,10 +1,9 @@
-#Installation requise 
-npm i react-icons
-#fetch des données 
-J'ai utilisé les fonctions générées à l'aide de Postman pour la gestion des pets : ajout, suppression et mise à jour 
-et pour les users: login et add user
-Vous trouverez ces fonctions:
-connect() dans le fichier Login et createuser() dans le fichier Signup pour l'authentification des utilisateurs
-et les fonctions getpets() pour l'affichage des animaux et deletepet() pour la suppression d'un animal dans le fichier pets ainsi que editpet() dans le fichier petedit pour la mise à jour des animaux.
-J'ai aussi fait un petit exemple d'une page d'acceuil (Home) ainsi qu'une page Sign In et une autre Sign Up, page editpet et finalement addpet.
 
+<h1>Puppify</h1>
+<i>Pets store</i>
+(in progress...)
+<br/>
+
+
+
+![puppify](https://user-images.githubusercontent.com/81996794/182487258-0fedf8cf-67a9-4fbc-a85d-10e3d284f943.PNG)
