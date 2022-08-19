@@ -8,6 +8,10 @@ export default class Home extends Component {
     return (
      <div>
          <Navbar></Navbar>
-         <
+         <img src={img1}/>
+        <section></section>
+        <Footer></Footer>
+     </div>
+    )
   }
 }
