@@ -10,7 +10,7 @@ export default class Home extends Component {
          <Navbar></Navbar>
          <img src={img1}/>
         <section></section>
-       
+        <Footer></Footer>
      </div>
     )
   }
