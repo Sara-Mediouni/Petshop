@@ -20,20 +20,19 @@ const Footer = () => {
                     <div className="box-container">
 
 <div className="box ">
-    <h3>Besoin d'aide ?</h3>
+    <h3>Need help ?</h3>
     <a href="#"><i><AiOutlineArrowRight/></i>Contacts</a>
 </div>
 
 <div className="box">
-    <h3>Notre emplacement</h3>
-    <a href="#"><i><MdLocationPin/></i>Tunisie</a>
+    <h3>Our location</h3>
+    <a href="#"><i><MdLocationPin/></i>Tunisia</a>
 </div>
 
 <div className="box">
-    <h3>Liens utiles</h3>
-    <a href="#"><i><AiOutlineArrowRight/></i>Clubs</a>
-    <a href="#"><i><AiOutlineArrowRight/></i>Salles</a>
-    <a href="#"><i><AiOutlineArrowRight/></i>Evènements</a>
+    <h3>Useful links</h3>
+    <a href="#"><i><AiOutlineArrowRight/></i>Store</a>
+    
 </div>
 
 
@@ -42,7 +41,7 @@ const Footer = () => {
 				
 			<div class="responsive">
                 <div class="col-md-10 col-sm-12  text-center icons">
-                    <p>Rejoignez-nous sur les réseaux sociaux</p>
+                    <p>Join us on social networks</p>
 <a href="#"><i><SiGmail/></i></a>
 <a href="#"><i><ImFacebook/></i></a>
 <a href="#"><i><GrTwitter/></i></a>

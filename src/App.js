@@ -19,6 +19,7 @@ import Petadd from './pages/petadd';
 import './App.css'
 import { Navbar } from 'react-bootstrap';
 import NavbarComp from './pages/Navbar';
+import Footer from './pages/footer';
 function App() {
   return (
     <BrowserRouter >
@@ -32,6 +33,7 @@ function App() {
     <Route path="/petedit/:id" element={<Petedit/>} exact /> 
      <Route path="/petadd" element={<Petadd/>} exact />
     </Routes>
+    <Footer/>
     </BrowserRouter>
   );
 }
