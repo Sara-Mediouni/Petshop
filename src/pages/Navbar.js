@@ -35,8 +35,8 @@ export default function NavbarComp(){
          </Navbar.Toggle>
          <Navbar.Collapse>
             <Nav className="me-auto">
-            <Nav.Link href="#home" className={activeLink==='home'?'active navbar-link':'navbar-link'} onClick={()=>onUpdateActiveLink('home')}>Home</Nav.Link>
-            <Nav.Link href="#store"className={activeLink==='store'?'active navbar-link':'navbar-link'}onClick={()=>onUpdateActiveLink('store')}>Store</Nav.Link>
+            <Nav.Link href="/" className={activeLink==='home'?'active navbar-link':'navbar-link'} onClick={()=>onUpdateActiveLink('home')}>Home</Nav.Link>
+            <Nav.Link href="/pets"className={activeLink==='store'?'active navbar-link':'navbar-link'}onClick={()=>onUpdateActiveLink('store')}>Store</Nav.Link>
             <Nav.Link href="#help"className={activeLink==='help'?'active navbar-link':'navbar-link'}onClick={()=>onUpdateActiveLink('help')}>Help</Nav.Link>
             <Nav.Link href="#contacts"className={activeLink==='contacts'?'active navbar-link':'navbar-link'}onClick={()=>onUpdateActiveLink('contacts')}>Contacts</Nav.Link>
           </Nav>

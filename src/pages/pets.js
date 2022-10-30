@@ -2,6 +2,9 @@ import React, { Component } from 'react'
 import './pets.css';
 import {GrFormTrash} from 'react-icons/gr';
 import Navbar from './Navbar';
+import img1 from '../images/poodle-beige-background-portrait-funny-pet-studio_219326-87.webp';
+import img2 from '../images/male-chocolate-small-puppy-poodle-dog-photoshoot-studio-pet-photography-with-concept-breaking-blue-paper-head-through-it-with-expression_374656-464.webp';
+
 export default class Pets extends Component {
     constructor(props) {
         super(props);
@@ -51,53 +54,12 @@ fetch("https://petstore.swagger.io/v2/pet/"+id, requestOptions)
 }
   render() {
     return (
-        <div>
-   <Navbar>
-    </Navbar>
+        <div className='container' style={{marginTop:"200px"}}>
+      <img src={img1} style={{height:"350px",borderRadius:"50px"}}/>
+      <p>ggggggggggggg</p>
   
-    <div class="container" style={{marginTop:'200px'}}>
-      <a class="btn btn-success add" href='/petadd'>Add a pet</a>
-        <div class="row">
-            {this.state.pets.slice(0,9).map((p)=>{
-                this.state.c=p.category;
-             return(
-            <div class="col-md-4">
-                <div class="card-sl">
-                    <div class="card-image">
-                        <img
-                            src={p.photoUrls} />
-                    </div>
-
-                    <a onClick={() => this.deletepet(p.id)} class="card-action" href="#"><GrFormTrash style={{fontWeight:'1rem'}} /></a>
-                    <div class="card-heading">
-                        {p.name}
-                    </div>
-                    <div class="card-text">
-                        
-                    </div>
-                    <div class="card-text">
-       
-                    </div>
-                    
-                    <a class="card-button"href={"/petedit/"+p.id}> Edit</a>
-                 
-                </div>
-            </div>)})}
-            
-        </div> </div>  
-        <nav aria-label="Page navigation example">
-  <ul class="pagination justify-content-center">
-    <li class="page-item disabled">
-      <a class="page-link" href="#" tabindex="-1">Previous</a>
-    </li>
-    <li class="page-item"><a class="page-link" href="#">1</a></li>
-    <li class="page-item"><a class="page-link" href="#">2</a></li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
-    <li class="page-item">
-      <a class="page-link" href="#">Next</a>
-    </li>
-  </ul>
-</nav></div> 
+    
+     </div> 
     )
   }
 }
