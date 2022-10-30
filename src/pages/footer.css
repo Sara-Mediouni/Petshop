@@ -2,7 +2,7 @@
     overflow-x: hidden;
     width:100%;
     bottom:0;
-    background: #fff; 
+    background: #e59dad; 
     padding:50px;
     padding-left: 180px;
     padding-right: 10px;
@@ -41,7 +41,7 @@
     .box-container .box a{
         display: block;
         font-size: 1.3rem;
-        color:#000;
+        color:#fff;
         padding:14px 0;
         text-decoration: none;
         padding-left: 10px;
@@ -51,7 +51,7 @@
     
     
     .box-container .box  a i{
-       color:#e3b04b;
+       color:#fff;
     font-size: 25px;
        padding-left: 1.5rem;
        padding-right: 1rem;
@@ -62,7 +62,7 @@
        
     }
     .icons i{
-        color:#e3b04b;
+        color:#fff;
       font-size:30px;
       margin-left: 30px;
       padding:1.5rem
@@ -70,7 +70,7 @@
     
     .icons p{
         font-family: 'Libre Baskerville', serif;
-        color:#000;
+        color:#fff;
         font-size:2rem;
         animation: flip 2s infinite;
         animation-delay: calc(.2s * var(--i));

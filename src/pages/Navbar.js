@@ -1,45 +1,52 @@
-import React, { Component } from 'react'
+import React from 'react'
 import {MdPets} from 'react-icons/md';
-import './Navbar.css'
+import {Navbar,Container,Nav} from "react-bootstrap"
+import './Navbar.css';
+import { useState ,useEffect} from 'react'
 import{BsPerson,BsSearch}from 'react-icons/bs';
 import{BiSearchAlt2} from 'react-icons/bi'
-export default class Navbar extends Component {
-  render() {
+export default function NavbarComp(){
+  const [activeLink,setActiveLink]=useState('home');
+    const [scrolled,setScrolled]=useState(false);
+    useEffect(()=>{
+        const onSroll=()=>{
+            if (window.scrollY>50){
+                setScrolled(true);
+                console.log(scrolled)
+            }
+            else{
+                setScrolled(false);
+            }
+        }
+        window.addEventListener('scroll',onSroll);
+        return ()=>
+            window.removeEventListener('scroll',onSroll);
+    },[])
+    const onUpdateActiveLink=(value)=>{
+        setActiveLink(value)}
     return (
-        <div >
-        <nav  class="navbar nav-custom navbar-expand-lg navbar-dark">
-        <div class="container-fluid">
-          <a href="/" class="navbar-brand" style={{marginRight:'180px'}} ><h1>Puppify<MdPets/></h1></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-      
-          <div class="collapse navbar-collapse" id="navbarColor01">
-            <ul class="navbar-nav me-auto">
-              <li class="nav-item nav-item1">
-                <a class="nav-link " href="/">Home
-                 
-                </a>
-              </li>
-              <li class="nav-item nav-item1">
-                <a class="nav-link " href="/pets">Store</a>
-              </li>
-              <li class="nav-item nav-item1">
-                <a class="nav-link " href="#">Services</a>
-              </li>
-              <li class="nav-item nav-item1">
-                <a class="nav-link " href="#">About</a>
-              </li>
-              <div class="icons-container">
-             <a href="/login"><i><BsPerson/></i> </a>
-             <i><BiSearchAlt2/></i> 
-           </div>
-            </ul>
-            
-          </div>
-        </div>
-      </nav>
-      </div>
+      <Navbar className={scrolled?"scrolled":""}>
+        <Container>
+          <Navbar.Brand href="#home" className={scrolled?"navbar-brand2":""}>
+          <a href="/" class="navbar-brand" style={{marginRight:'180px'}} ><h1>Puppify<MdPets /></h1></a>
+          </Navbar.Brand>
+         <Navbar.Toggle aria-contols="basic-navbar-nav">
+            <span className="navbar-toggler-icon"></span>
+         </Navbar.Toggle>
+         <Navbar.Collapse>
+            <Nav className="me-auto">
+            <Nav.Link href="#home" className={activeLink==='home'?'active navbar-link':'navbar-link'} onClick={()=>onUpdateActiveLink('home')}>Home</Nav.Link>
+            <Nav.Link href="#store"className={activeLink==='store'?'active navbar-link':'navbar-link'}onClick={()=>onUpdateActiveLink('store')}>Store</Nav.Link>
+            <Nav.Link href="#help"className={activeLink==='help'?'active navbar-link':'navbar-link'}onClick={()=>onUpdateActiveLink('help')}>Help</Nav.Link>
+            <Nav.Link href="#contacts"className={activeLink==='contacts'?'active navbar-link':'navbar-link'}onClick={()=>onUpdateActiveLink('contacts')}>Contacts</Nav.Link>
+          </Nav>
+          <span className='icons'><BsPerson/></span>
+          
+         </Navbar.Collapse>
+          
+        </Container>
+      </Navbar>
+        
     )
-  }
+  
 }
